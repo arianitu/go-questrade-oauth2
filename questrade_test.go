@@ -2,7 +2,6 @@ package questradeoauth2
 
 import (
 	"encoding/json"
-	"fmt"
 	"golang.org/x/oauth2"
 	"os"
 	"testing"
@@ -19,7 +18,6 @@ func TestAuthentication(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	fmt.Println(apiServer)
 
 	resp, err := client.Get(apiServer + "v1/time")
 	if err != nil {
